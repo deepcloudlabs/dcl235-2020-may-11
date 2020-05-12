@@ -8,12 +8,13 @@ import com.example.banking.dto.HavaleRequest;
 import com.example.banking.dto.HavaleResponse;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 /**
  * @author Binnur Kurt <binnur.kurt@gmail.com>
  */
 @RestController
-@RequestScope
+@SessionScope
 @RequestMapping("accounts")
 @CrossOrigin
 public class BankingController {
