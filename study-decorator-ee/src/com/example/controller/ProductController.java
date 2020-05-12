@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Iterator;
 
 @WebServlet(urlPatterns = "/products")
 public class ProductController extends HttpServlet {
@@ -21,9 +20,7 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         double totalPrice = 0.;
         resp.getWriter().append("<html><body><ul>");
-        for (Iterator<Product> it = products.iterator(); it.hasNext(); ) {
-            Product product = it.next();
-
+        for (Product product : products) {
             resp.getWriter().append("<li>")
                     .append(product.name())
                     .append(": ")
