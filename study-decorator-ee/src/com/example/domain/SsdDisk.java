@@ -5,9 +5,14 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class Notbook implements Product {
+public class SsdDisk implements Product{
     @Override
     public double price() {
-        return 5_000;
+        return 250;
+    }
+
+    @Override
+    public String name() {
+        return "SSD Disk";
     }
 }

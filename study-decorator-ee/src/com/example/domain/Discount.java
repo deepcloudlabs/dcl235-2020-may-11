@@ -17,4 +17,9 @@ public class Discount implements Product {
     public double price() {
         return product.price() * DISCOUNT_RATE;
     }
+
+    @Override
+    public String name() {
+        return product.name();
+    }
 }
